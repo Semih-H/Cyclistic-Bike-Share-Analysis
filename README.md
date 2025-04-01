@@ -206,5 +206,8 @@ WHERE rideable_type != 'classic_bike' AND
     rideable_type != 'electric_scooter';
 ```
 **Explanation:** Removes rows with invalid rideable types.
-![download](https://github.com/user-attachments/assets/72208b1d-40f8-4969-83ad-8fa7af810c91)
+
+# Tableau visualizations
+
+
 
