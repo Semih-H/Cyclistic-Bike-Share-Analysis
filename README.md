@@ -15,9 +15,9 @@ The findings from this study will help the bike-sharing company improve its serv
 
 
 ## Dataset
-**Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)
-**Format**: CSV
-**Records**: More than 5 million rows of data
+**Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)<br>
+**Format**: CSV <br>
+**Records**: More than 5 million rows of data <br>
 <br>
 
 | Field Name            | Description                                                             |
