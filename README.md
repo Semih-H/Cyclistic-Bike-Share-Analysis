@@ -15,7 +15,7 @@ The findings from this study will help the bike-sharing company improve its serv
 
 
 ## Dataset
-**Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)
+**Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)<br>
 The data used for this analysis comes from a bike-sharing company, containing trip details such as ride duration, user type, and timestamps. The dataset helps in identifying key trends and differences between casual riders and annual members. The data spans **one year, from March 2024 to February 2025 (inclusive).**
 
 
