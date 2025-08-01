@@ -1,5 +1,5 @@
 # Cyclistic Bike Share Data Analysis
-**Google Data Analytics Capstone Project Using SQL & Tableau**
+Google Data Analytics Capstone Project Using SQL & Tableau
 
 ## Overview
 This project is a detailed case study analyzing the **ride-sharing patterns** of a bike-share company in Chicago. The goal is to understand how different user types—**casual riders** and **annual members**—utilize the service and how the company can optimize its operations for better customer retention and revenue growth. 
