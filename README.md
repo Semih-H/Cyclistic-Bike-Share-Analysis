@@ -2,7 +2,7 @@
 Google Data Analytics Capstone Project Using SQL & Tableau
 
 ## Overview
-This project is a detailed case study analyzing the **ride-sharing patterns** of a bike-share company in Chicago. The goal is to understand how different user types—**casual riders** and **annual members**—utilize the service and how the company can optimize its operations for better customer retention and revenue growth. 
+This project is a detailed case study **analyzing the ride-sharing patterns** of a bike-share company in Chicago. The goal is to understand how different user types, **casual riders** and **annual members** utilize the service and how the company can optimize its operations for better customer retention and revenue growth. 
 
 The analysis focuses on identifying key trends in user behavior, such as **ride duration**, **peak usage times**, and **seasonal variations**. By leveraging **SQL** for data extraction and **Tableau** for visualization, the study aims to provide actionable insights that can help the company make data-driven business decisions.
 
@@ -13,7 +13,6 @@ Through this project, we aim to answer critical business questions such as:
 
 The findings from this study will help the bike-sharing company improve its services, enhance the user experience, and increase profitability by targeting key customer segments more effectively.
 
-
 ## Dataset
 
 The data used for this analysis comes from a **bike-sharing company** called **Cyclistic** from Chicago, containing trip details such as ride duration, user type, and timestamps. The dataset helps in identifying key trends and differences between **casual riders** and annual **members**. The data used in this analysis spans **one year, from March 2024 to February 2025 (inclusive).** <br>
@@ -23,27 +22,23 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 **Records**: More than 5 million rows of data <br>
 <br>
 
-| Field Name            | Description                                                             |
-|------------------------|-------------------------------------------------------------------------|
-| ride_id               | Unique identifier for each ride.                                        |
-| rideable_type         | Type of bike used: `classic_bike`, `electric_bike`, or `docked_bike`.   |
-| started_at            | Start date and time of the ride (timestamp).                            |
-| ended_at              | End date and time of the ride (timestamp).                              |
-| start_station_name    | Name of the station where the ride started.                             |
-| start_station_id      | Unique ID of the start station.                                         |
-| end_station_name      | Name of the station where the ride ended.                               |
-| end_station_id        | Unique ID of the end station.                                           |
-| start_lat             | Latitude of the starting location.                                      |
-| start_lng             | Longitude of the starting location.                                     |
-| end_lat               | Latitude of the ending location.                                        |
-| end_lng               | Longitude of the ending location.                                       |
-| member_casual         | User type: `member` (subscriber) or `casual` (one-time rider).          |
-
+| Field Name            | Description                                                            |
+|------------------------|-----------------------------------------------------------------------|
+| ride_id               | Unique identifier for each ride                                        |
+| rideable_type         | Type of bike used: `classic_bike`, `electric_bike`, `electric_scooter` |
+| started_at            | Start date and time of the ride (timestamp)                            |
+| ended_at              | End date and time of the ride (timestamp)                              |
+| start_station_name    | Name of the station where the ride started                             |
+| start_station_id      | Unique ID of the start station                                         |
+| end_station_name      | Name of the station where the ride ended                               |
+| end_station_id        | Unique ID of the end station                                           |
+| start_lat             | Latitude of the starting location                                      |
+| start_lng             | Longitude of the starting location                                     |
+| end_lat               | Latitude of the ending location                                        |
+| end_lng               | Longitude of the ending location                                       |
+| member_casual         | User type: `member` (subscriber) or `casual` (one-time rider)          |
 
 <br>
-
-
-
 
 ## Tools Used
 - **SQL** (for data querying and manipulation)
@@ -61,8 +56,6 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 # Bikeshare Data Cleaning and Transformation
 
 This document explains the SQL queries used for cleaning, validating, and transforming the `bikeshare_all_trips` dataset. The goal is to prepare the data for accurate analysis by handling missing values, removing duplicates, and adding new features.
-
----
 
 ## 1. Uniting Multiple Tables into One
 
@@ -94,8 +87,6 @@ SELECT * FROM "202502-divvy-tripdata";
 ```
 **Explanation:** This query merges the 12 monthly bikeshare datasets into a single table named `bikeshare_all_trips`. Using `UNION ALL` ensures that all records are retained without removing duplicates, which is useful for complete data analysis.
 
----
-
 ## 2. Checking for NULL Values
 
 ```sql
@@ -117,8 +108,6 @@ FROM bikeshare_all_trips;
 ```
 **Explanation:** This query counts the number of NULL values in each column by subtracting the count of non-null values from the total row count.
 
----
-
 ## 3. Identifying Rows with Missing Data
 
 ```sql
@@ -133,8 +122,6 @@ WHERE start_station_name IS NULL
 ```
 **Explanation:** Retrieves all rows where important location-related fields contain NULL values.
 
----
-
 ## 4. Deleting Rows with Critical Missing Values
 
 ```sql
@@ -144,8 +131,6 @@ WHERE
      OR end_lat IS NULL OR end_lng IS NULL);
 ```
 **Explanation:** Removes rows where latitude or longitude values are missing, as these records are not useful for analysis.
-
----
 
 ## 5. Replacing NULL Values with Default Values
 
@@ -167,8 +152,6 @@ SET end_station_id = 'Unknown'
 WHERE end_station_id IS NULL;
 ```
 **Explanation:** Updates NULL station names and IDs to 'Unknown' for better data consistency.
-
----
 
 ## 6. Detecting and Removing Duplicates
 
@@ -193,8 +176,6 @@ WHERE ride_id IN (
 ```
 **Explanation:** Deletes duplicate entries, keeping only the first occurrence based on `started_at`.
 
----
-
 ## 7. Cleaning Station Names (Trimming Whitespace)
 
 ```sql
@@ -209,8 +190,6 @@ SET ride_id = TRIM(ride_id),
 ```
 **Explanation:** Removes leading and trailing whitespace from string fields.
 
----
-
 ## 8. Validating Latitude and Longitude Values
 
 ```sql
@@ -222,7 +201,6 @@ WHERE start_lat NOT BETWEEN -90 AND 90
 ```
 **Explanation:** Deletes rows where latitude or longitude values are outside the valid geographic range.
 
----
 
 ## 9. Ensuring Valid Rideable Types
 
