@@ -2,7 +2,7 @@
 **Google Data Analytics Capstone Project Using SQL & Tableau**
 
 ## Overview
-This project is a detailed case study analyzing the **ride-sharing patterns** of a bike-sharing company. The goal is to understand how different user types—**casual riders** and **annual members**—utilize the service and how the company can optimize its operations for better customer retention and revenue growth. 
+This project is a detailed case study analyzing the **ride-sharing patterns** of a bike-share company in Chicago. The goal is to understand how different user types—**casual riders** and **annual members**—utilize the service and how the company can optimize its operations for better customer retention and revenue growth. 
 
 The analysis focuses on identifying key trends in user behavior, such as **ride duration**, **peak usage times**, and **seasonal variations**. By leveraging **SQL** for data extraction and **Tableau** for visualization, the study aims to provide actionable insights that can help the company make data-driven business decisions.
 
@@ -16,9 +16,31 @@ The findings from this study will help the bike-sharing company improve its serv
 
 ## Dataset
 **Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)
+**Format**: CSV
+**Records**: More than 5 million rows of data
+**Fields**: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, member_casual
+
+
+| Field Name            | Description                                                             |
+|------------------------|-------------------------------------------------------------------------|
+| ride_id               | Unique identifier for each ride.                                        |
+| rideable_type         | Type of bike used: `classic_bike`, `electric_bike`, or `docked_bike`.   |
+| started_at            | Start date and time of the ride (timestamp).                            |
+| ended_at              | End date and time of the ride (timestamp).                              |
+| start_station_name    | Name of the station where the ride started.                             |
+| start_station_id      | Unique ID of the start station.                                         |
+| end_station_name      | Name of the station where the ride ended.                               |
+| end_station_id        | Unique ID of the end station.                                           |
+| start_lat             | Latitude of the starting location.                                      |
+| start_lng             | Longitude of the starting location.                                     |
+| end_lat               | Latitude of the ending location.                                        |
+| end_lng               | Longitude of the ending location.                                       |
+| member_casual         | User type: `member` (subscriber) or `casual` (one-time rider).          |
+
+
 <br>
 
-The data used for this analysis comes from a bike-sharing company, containing trip details such as ride duration, user type, and timestamps. The dataset helps in identifying key trends and differences between casual riders and annual members. The data spans **one year, from March 2024 to February 2025 (inclusive).**
+The data used for this analysis comes from a **bike-sharing company**, containing trip details such as ride duration, user type, and timestamps. The dataset helps in identifying key trends and differences between casual riders and annual members. The data used in this analysis spans **one year, from March 2024 to February 2025 (inclusive).**
 
 
 ## Tools Used
