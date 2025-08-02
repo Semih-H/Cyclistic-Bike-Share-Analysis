@@ -212,7 +212,7 @@ WHERE rideable_type != 'classic_bike' AND
 ```
 **Explanation:** Removes rows with invalid rideable types.
 
-# Tableau visualizations
+# Analysis
 
 
 
