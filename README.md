@@ -217,6 +217,7 @@ WHERE rideable_type != 'classic_bike' AND
 **[Cyclistic Bike Share Dashboard Tableau Public Link](https://public.tableau.com/app/profile/semih.h.rmeydan/viz/BikeShareCyclistic/BikeDash)** <br>
 
 
-<img width="2765" height="1532" alt="Bikesharegithub" src="https://github.com/user-attachments/assets/65612a70-210a-4f57-b8c7-2047387fc36a" />
+<img width="2722" height="1540" alt="Bikesharegithub" src="https://github.com/user-attachments/assets/6da67b9f-f69e-4a31-a310-e854f0232b60" />
+
 
 
