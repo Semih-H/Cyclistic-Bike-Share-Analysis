@@ -214,5 +214,6 @@ WHERE rideable_type != 'classic_bike' AND
 
 # Analysis
 
+<img width="2737" height="1542" alt="bikeshare3" src="https://github.com/user-attachments/assets/6d801ce6-0953-4863-b2d5-6d0479b4fed7" />
 
 
