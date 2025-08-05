@@ -7,7 +7,7 @@ This project is a detailed case study **analyzing the ride-sharing patterns** of
 The analysis focuses on identifying key trends in user behavior, such as **ride duration**, **peak usage times**, and **seasonal variations**. By leveraging **SQL** for data extraction and **Tableau** for visualization, the study aims to provide actionable insights that can help the company make data-driven business decisions.
 
 Through this project, we aim to answer critical business questions such as:
-- What are the differences in riding behavior between casual users and annual members?
+- What are the differences in riding behavior of casual users versus annual members?
 - When do users ride the most, and how does seasonality impact usage trends?
 - How can the company convert more casual riders into paying subscribers?
 
