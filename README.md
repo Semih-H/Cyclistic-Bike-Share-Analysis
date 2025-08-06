@@ -52,7 +52,7 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 
 # Bikeshare Data Cleaning and Transformation
 
-This document explains the SQL queries used for cleaning, validating, and transforming the `bikeshare_all_trips` dataset. The goal is to prepare the data for accurate analysis by handling missing values, removing duplicates, and adding new features.
+This document explains the SQL queries used for cleaning, validating, and transforming the `bikeshare_all_trips` dataset. The goal is to prepare the data for accurate analysis by handling missing values, removing duplicates, and adding new fields.
 
 ## 1. Uniting Multiple Tables into One
 
