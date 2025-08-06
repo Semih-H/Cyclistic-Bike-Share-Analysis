@@ -23,9 +23,9 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 
 **Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)<br>
 **Format**: CSV <br>
-**Records**: 5,775,812 million rows of data <br>
-**Fields Breakdown**: <br>
+**Records**: 5,775,812 million rows of data 
 <br>
+**Fields Breakdown**: <br>
 
 | Field Name            | Description                                                            |
 |------------------------|-----------------------------------------------------------------------|
