@@ -272,7 +272,7 @@ UPDATE bikeshare_1year_tripdata
 SET distance_km = ROUND(distance_km::numeric, 3);
 ```
 
-For TABLEAU:
+For Tableau:
 
 ```sql
 ALTER TABLE bikeshare_1year_tripdata
