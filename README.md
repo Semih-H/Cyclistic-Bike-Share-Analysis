@@ -1,6 +1,8 @@
 # Cyclistic Bike Share Data Analysis
 Google Data Analytics Capstone Project Using SQL & Tableau
 
+<br>
+
 ## Overview
 This project is a detailed case study **analyzing the ride-sharing patterns** of a bike-share company in Chicago. The goal is to understand how different user types, **casual riders** and **annual members** utilize the service and how the company can optimize its operations for better customer retention and revenue growth. 
 
@@ -12,6 +14,8 @@ Through this project, we aim to answer critical business questions such as:
 - How can the company convert more casual riders into paying subscribers?
 
 The findings from this study will help the bike-sharing company improve its services, enhance the user experience, and increase profitability by targeting key customer segments more effectively.
+
+<br>
 
 ## Dataset
 
@@ -43,6 +47,8 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 ## Tools Used
 - **SQL** (for data querying and manipulation)
 - **Tableau** (for data visualization)
+
+<br>
 
 # Bikeshare Data Cleaning and Transformation
 
@@ -284,9 +290,9 @@ UPDATE bikeshare_1year_tripdata
 SET ride_duration_minutes = EXTRACT(EPOCH FROM ride_duration) / 60
 ```
 
+<br>
 
-
-# Data Analysis
+# Analysis
 
 
 - **Total Rides by User Type:**
@@ -318,7 +324,7 @@ This chart shows that the average distance for both casual riders and members is
 - **Total Rides (Month):**
 
 
-<img width="600" height="300" alt="month" src="https://github.com/user-attachments/assets/904f898f-0521-4235-ba17-3d5709de1ea2" />
+<img width="500" height="250" alt="month" src="https://github.com/user-attachments/assets/904f898f-0521-4235-ba17-3d5709de1ea2" />
 
 This line chart illustrates the seasonal trend of total rides over the year. Both members and casual riders show a clear increase in rides during the warmer months (**May to September**), with a **peak in September**, and a decline in colder months.
 
@@ -328,7 +334,7 @@ This line chart illustrates the seasonal trend of total rides over the year. Bot
 - **Total Rides (Week):**
 
 
-<img width="600" height="300" alt="weekdays" src="https://github.com/user-attachments/assets/ea0d9fdd-58f7-42d6-a29a-4b8094ce3c61" />
+<img width="500" height="250" alt="weekdays" src="https://github.com/user-attachments/assets/ea0d9fdd-58f7-42d6-a29a-4b8094ce3c61" />
 
 This line chart displays the total rides for each day of the week. Member rides are highest on **weekdays** and lower on **weekends**, indicating a primary use for commuting, while casual riders show a peak in usage on **Saturdays** and **Sundays**.
 
@@ -338,7 +344,7 @@ This line chart displays the total rides for each day of the week. Member rides 
 - **Total Rides (Hour):**
 
 
-<img width="600" height="300" alt="hour" src="https://github.com/user-attachments/assets/21a34cfd-9e80-4700-8b60-fa40da2692a4" />
+<img width="500" height="250" alt="hour" src="https://github.com/user-attachments/assets/21a34cfd-9e80-4700-8b60-fa40da2692a4" />
 
 This chart visualizes the total rides per hour of the day for both members and casual riders. Members' rides peak during typical commuter hours (**around 8 AM and 5-6 PM**), reflecting a daily travel pattern, likely for work, while casual riders' usage is highest in the **late afternoon**.
 
@@ -347,7 +353,7 @@ This chart visualizes the total rides per hour of the day for both members and c
 
 - **Total Rides by Bike Type:**
 
-<img width="600" height="400" alt="biketypes" src="https://github.com/user-attachments/assets/237822d5-38ea-4dd0-ad3d-3274ee5c927d" />
+<img width="500" height="330" alt="biketypes" src="https://github.com/user-attachments/assets/237822d5-38ea-4dd0-ad3d-3274ee5c927d" />
 
 This stacked bar chart shows that Classic bikes and E-bikes are the most popular choices, with E-bikes having slightly more total rides. E-scooters account for a very small portion of the total rides.
 
@@ -358,7 +364,7 @@ This stacked bar chart shows that Classic bikes and E-bikes are the most popular
 
 - **Average Ride Duration by Bike Type:**
 
-<img width="600" height="350" alt="avg ride duration bike types" src="https://github.com/user-attachments/assets/22039146-95ed-4d67-ab5a-0a495be5e8e7" />
+<img width="500" height="290" alt="avg ride duration bike types" src="https://github.com/user-attachments/assets/22039146-95ed-4d67-ab5a-0a495be5e8e7" />
 
 This stacked bar chart breaks down the average ride duration for each bike type, showing the contribution from both member and casual riders. It reveals that the longest average rides, by a large margin, are taken on Classic bikes by casual riders.
 
@@ -368,10 +374,11 @@ This stacked bar chart breaks down the average ride duration for each bike type,
 
 - **Top Stations:**
 
-<img width="600" height="350" alt="topstations" src="https://github.com/user-attachments/assets/38f28bab-3b09-434c-91d7-8183569d9748" />
+<img width="500" height="290" alt="topstations" src="https://github.com/user-attachments/assets/38f28bab-3b09-434c-91d7-8183569d9748" />
 
 This bar chart lists the top five stations by total number of rides. It identifies "Streeter Dr & Grand Ave" as the most popular station, with a significantly higher number of rides than the others.
 
+<br>
 
 # Conclusion and Recommendations
 
@@ -385,6 +392,7 @@ To convert more casual riders into paying subscribers, the company should focus 
 
 - **Target Marketing with Usage-Based Incentives**: Utilize the data to create targeted marketing campaigns. For example, after a casual rider completes a ride that exceeds the average member ride duration, an in-app notification or email could be sent highlighting the savings they would have gained with a membership. This would use their specific usage patterns to demonstrate the value of a subscription in a tangible way.
 
+<br>
 
 # Dashboard 
 **[Cyclistic Bike Share Dashboard Tableau Public Link](https://public.tableau.com/app/profile/semih.h.rmeydan/viz/BikeShareCyclistic/BikeDash)** <br>
