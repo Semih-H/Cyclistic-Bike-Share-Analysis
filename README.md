@@ -295,6 +295,7 @@ SET ride_duration_minutes = EXTRACT(EPOCH FROM ride_duration) / 60
 
 This simple bar chart provides an overview of the total number of rides and breaks it down by user type. It clearly shows that members make up the majority of the total rides, accounting for **3.66 million** out of **5.78 million** total rides.
 
+<br>
 
 - **Average Ride Duration:**
 
@@ -302,12 +303,16 @@ This simple bar chart provides an overview of the total number of rides and brea
 
 This bar chart compares the average ride duration between casual riders and members. Casual riders have a significantly longer average ride duration at **21 minutes**, compared to members who average **12.1 minutes**.
 
+<br>
+
 
 - **Average Distance:**
 
 <img width="500" height="216" alt="Avg Distance" src="https://github.com/user-attachments/assets/b1300d06-f15e-4c44-84f1-7fcf1ac51c8f" />
 
 This chart shows that the average distance for both casual riders and members is very similar, at **just over 2 kilometers**. This suggests that while ride duration differs, the actual distance traveled per ride is consistent across both user groups.
+
+<br>
 
 
 - **Total Rides (Month):**
@@ -317,6 +322,8 @@ This chart shows that the average distance for both casual riders and members is
 
 This line chart illustrates the seasonal trend of total rides over the year. Both members and casual riders show a clear increase in rides during the warmer months (**May to September**), with a **peak in September**, and a decline in colder months.
 
+<br>
+
 
 - **Total Rides (Week):**
 
@@ -324,6 +331,8 @@ This line chart illustrates the seasonal trend of total rides over the year. Bot
 <img width="600" height="300" alt="weekdays" src="https://github.com/user-attachments/assets/ea0d9fdd-58f7-42d6-a29a-4b8094ce3c61" />
 
 This line chart displays the total rides for each day of the week. Member rides are highest on **weekdays** and lower on **weekends**, indicating a primary use for commuting, while casual riders show a peak in usage on **Saturdays** and **Sundays**.
+
+<br>
 
 
 - **Total Rides (Hour):**
@@ -333,6 +342,8 @@ This line chart displays the total rides for each day of the week. Member rides 
 
 This chart visualizes the total rides per hour of the day for both members and casual riders. Members' rides peak during typical commuter hours (**around 8 AM and 5-6 PM**), reflecting a daily travel pattern, likely for work, while casual riders' usage is highest in the **late afternoon**.
 
+<br>
+
 
 - **Total Rides by Bike Type:**
 
@@ -341,6 +352,7 @@ This chart visualizes the total rides per hour of the day for both members and c
 This stacked bar chart shows that Classic bikes and E-bikes are the most popular choices, with E-bikes having slightly more total rides. E-scooters account for a very small portion of the total rides.
 
 
+<br>
 
 
 
@@ -351,6 +363,7 @@ This stacked bar chart shows that Classic bikes and E-bikes are the most popular
 This stacked bar chart breaks down the average ride duration for each bike type, showing the contribution from both member and casual riders. It reveals that the longest average rides, by a large margin, are taken on Classic bikes by casual riders.
 
 
+<br>
 
 
 - **Top Stations:**
