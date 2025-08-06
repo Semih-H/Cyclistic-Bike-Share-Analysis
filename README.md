@@ -362,9 +362,15 @@ This bar chart lists the top five stations by total number of rides. It identifi
 
 # Conclusion and Recommendations
 
-Hour: The single, later peak for casual riders suggests a different usage pattern, perhaps for recreational or leisure activities.
+The data reveals a clear distinction between casual riders and members. Members primarily use the service for commuting, as seen by their peak usage during weekday rush hours. Their rides are shorter in duration but occur more frequently. In contrast, casual riders use the service for longer periods, often on weekends and in the late afternoon, suggesting a preference for recreational use. While both groups travel similar distances on average, their riding behaviors and patterns are distinct.
 
+To convert more casual riders into paying subscribers, the company should focus on bridging this behavioral gap by offering tailored incentives and subscription models.
 
+Introduce a Flexible Weekend Pass: Casual riders' peak usage on weekends suggests they may be hesitant to commit to a full annual membership. The company could introduce a more flexible, multi-day pass or a weekend-specific subscription that is more appealing for recreational use. This would allow casual riders to experience the benefits of a membership (e.g., discounted rates) without the perceived commitment of an annual plan.
+
+Offer "Family" or "Group" Membership Tiers: Casual riders tend to have longer rides, which could indicate they are riding with friends or family. The company could introduce a membership that allows for multiple bikes to be checked out under one account at a reduced rate. This would directly appeal to the likely use case of casual riders and make a subscription a more cost-effective option for group outings.
+
+Target Marketing with Usage-Based Incentives: Utilize the data to create targeted marketing campaigns. For example, after a casual rider completes a ride that exceeds the average member ride duration, an in-app notification or email could be sent highlighting the savings they would have gained with a membership. This would use their specific usage patterns to demonstrate the value of a subscription in a tangible way.
 
 
 # Dashboard
