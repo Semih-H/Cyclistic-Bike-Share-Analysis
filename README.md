@@ -19,7 +19,7 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 
 **Source**: [Cyclistic Bike Share Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html)<br>
 **Format**: CSV <br>
-**Records**: More than 5 million rows of data <br>
+**Records**: 5,775,812 million rows of data <br>
 <br>
 
 | Field Name            | Description                                                            |
@@ -43,15 +43,6 @@ The data used for this analysis comes from a **bike-sharing company** called **C
 ## Tools Used
 - **SQL** (for data querying and manipulation)
 - **Tableau** (for data visualization)
-
-## Key Insights
-- To be added
-- 
-
-## Business Recommendations
-1. To be added
-2. 
-3. 
 
 # Bikeshare Data Cleaning and Transformation
 
@@ -106,7 +97,7 @@ SELECT
     COUNT(*) - COUNT(member_casual) AS member_casual_nulls
 FROM bikeshare_all_trips;
 ```
-**Explanation:** This query counts the number of NULL values in each column by subtracting the count of non-null values from the total row count.
+**Explanation:** This query counts the number of NULL values in each column by subtracting the count of non-null values from the total row count. This resulted in the detection of missing data in the following columns: start_station_name, start_station_id, end_station_name, end_station_id, end_lat, and end_lng.
 
 ## 3. Identifying Rows with Missing Data
 
@@ -120,7 +111,7 @@ WHERE start_station_name IS NULL
    OR end_lat IS NULL
    OR end_lng IS NULL;
 ```
-**Explanation:** Retrieves all rows where important location-related fields contain NULL values.
+**Explanation:** Retrieves all rows where important location-related fields contain NULL values. We should keep the records only if all coordinates are present. Otherwise, if end coordinates are missing, we can't determine where the ride ended, making the record incomplete and unreliable for analysis.
 
 ## 4. Deleting Rows with Critical Missing Values
 
@@ -211,6 +202,89 @@ WHERE rideable_type != 'classic_bike' AND
     rideable_type != 'electric_scooter';
 ```
 **Explanation:** Removes rows with invalid rideable types.
+
+## 9. Ensuring No Negative Ride Durations
+
+```sql
+SELECT *
+FROM bikeshare_1year_tripdata
+WHERE ended_at < started_at;
+```
+
+```sql
+DELETE
+FROM bikeshare_1year_tripdata
+WHERE ended_at < started_at;
+```
+**Explanation:** 202 rows with negative ride durations were detected and deleted.
+
+## 9. Introducing New Calculated Fields
+
+```sql
+ALTER TABLE bikeshare_1year_tripdata
+ADD COLUMN ride_duration INTERVAL,
+ADD COLUMN day_of_week VARCHAR(20),
+ADD COLUMN distance_km DOUBLE PRECISION;
+```
+
+Update ride_duration:
+
+```sql
+UPDATE bikeshare_1year_tripdata
+SET ride_duration = ended_at - started_at;
+```
+
+
+Update day_of_week:
+
+```sql
+UPDATE bikeshare_1year_tripdata
+SET day_of_week = 
+    CASE
+        WHEN EXTRACT(DOW FROM started_at) = 0 THEN 'Sunday'
+        WHEN EXTRACT(DOW FROM started_at) = 1 THEN 'Monday'
+        WHEN EXTRACT(DOW FROM started_at) = 2 THEN 'Tuesday'
+        WHEN EXTRACT(DOW FROM started_at) = 3 THEN 'Wednesday'
+        WHEN EXTRACT(DOW FROM started_at) = 4 THEN 'Thursday'
+        WHEN EXTRACT(DOW FROM started_at) = 5 THEN 'Friday'
+        WHEN EXTRACT(DOW FROM started_at) = 6 THEN 'Saturday'
+    END;
+```
+
+
+Calculate distance (Haversine formula):
+
+```sql
+UPDATE bikeshare_1year_tripdata
+SET distance_km = 6371 * ACOS(
+    LEAST(1, GREATEST(-1,
+        COS(RADIANS(start_lat)) * COS(RADIANS(end_lat)) *
+        COS(RADIANS(end_lng) - RADIANS(start_lng)) +
+        SIN(RADIANS(start_lat)) * SIN(RADIANS(end_lat))
+    ))
+);
+```
+
+ROUND distance_km records, casting to numeric:
+
+```sql
+UPDATE bikeshare_1year_tripdata
+SET distance_km = ROUND(distance_km::numeric, 3);
+```
+
+For TABLEAU:
+
+```sql
+ALTER TABLE bikeshare_1year_tripdata
+ADD COLUMN ride_duration_minutes NUMERIC;
+```
+
+```sql
+UPDATE bikeshare_1year_tripdata
+SET ride_duration_minutes = EXTRACT(EPOCH FROM ride_duration) / 60
+```
+
+
 
 # Analysis
 
