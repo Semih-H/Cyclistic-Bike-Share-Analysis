@@ -393,6 +393,8 @@ To convert more casual riders into paying subscribers, the company should focus 
 
 - **Target Marketing with Usage-Based Incentives**: Utilize the data to create targeted marketing campaigns. For example, after a casual rider completes a ride that exceeds the average member ride duration, an in-app notification or email could be sent highlighting the savings they would have gained with a membership. This would use their specific usage patterns to demonstrate the value of a subscription in a tangible way.
 
+- **Enhance Services at Busy Stations**:  Some stations like Streeter Dr & Grand Ave, have a much higher number of rides than others. These busy spots can be used for special promotions or on-site membership sign-ups. Focusing efforts at these stations can help reach more casual riders when they may be most open to becoming members.
+
 <br>
 
 # Dashboard 
