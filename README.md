@@ -375,7 +375,7 @@ This stacked bar chart breaks down the average ride duration for each bike type,
 
 - **Top Stations:**
 
-<img width="500" height="290" alt="topstations" src="https://github.com/user-attachments/assets/38f28bab-3b09-434c-91d7-8183569d9748" />
+<img width="500" height="290" alt="topst " src="https://github.com/user-attachments/assets/c049bdb6-4762-4845-8413-a32388272e0a" />
 
 This bar chart lists the top five stations by total number of rides. It identifies "Streeter Dr & Grand Ave" as the most popular station, with a significantly higher number of rides than the others.
 
